@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yanlining1234741.github.io/lining-yan/sitemap.xml
