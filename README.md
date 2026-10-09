@@ -1,5 +1,7 @@
 # Lining Yan — Personal Homepage
 
+The homepage leads with the research question — when the evidence is incomplete, what should the agent do — and the three decisions Look, Carry, and Ask. It is a static site, not a template with a portrait card.
+
 Live site: **https://yanlining1234741.github.io/lining-yan/**
 
 Local path: `Desktop/Personal Project/lining-yan`

@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lining Yan — Yale CS | Personal Homepage</title>
-  <meta name="description" content="Lining Yan is an M.S. student in Computer Science at Yale University. Research interests: robotic learning, multimodal retrieval, efficient deep learning, agentic workflows, and NLP." />
+  <title>Lining Yan — Reliable and Adaptive Agents</title>
+  <meta name="description" content="Lining Yan is an M.S. student in Computer Science at Yale. He studies reliable and adaptive agents: when to look again, what state to carry forward, and when to ask." />
   <meta name="author" content="Lining Yan" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://yanlining1234741.github.io/lining-yan/" />
-
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Lining Yan — Yale CS" />
-  <meta property="og:description" content="M.S. student in Computer Science at Yale. Robotic learning, multimodal retrieval, efficient deep learning, and NLP." />
+  <meta property="og:title" content="Lining Yan — Reliable and Adaptive Agents" />
+  <meta property="og:description" content="M.S. student in Computer Science at Yale. When the evidence is incomplete, what should the agent do?" />
   <meta property="og:url" content="https://yanlining1234741.github.io/lining-yan/" />
   <meta property="og:image" content="https://yanlining1234741.github.io/lining-yan/assets/portrait.jpg" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lining Yan — Yale CS" />
-  <meta name="twitter:description" content="M.S. student in Computer Science at Yale. Robotic learning, multimodal retrieval, efficient deep learning, and NLP." />
-  <meta name="twitter:image" content="https://yanlining1234741.github.io/lining-yan/assets/portrait.jpg" />
-
+  <meta name="twitter:title" content="Lining Yan — Reliable and Adaptive Agents" />
+  <meta name="twitter:description" content="M.S. student in Computer Science at Yale. When the evidence is incomplete, what should the agent do?" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,98 +23,138 @@
     "name": "Lining Yan",
     "url": "https://yanlining1234741.github.io/lining-yan/",
     "image": "https://yanlining1234741.github.io/lining-yan/assets/portrait.jpg",
-    "email": "mailto:1234741@wku.edu.cn",
+    "email": "mailto:lining.yan@yale.edu",
     "jobTitle": "M.S. Student in Computer Science",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Yale University"
-    },
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Yale University" },
     "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Kean University" },
-      { "@type": "CollegeOrUniversity", "name": "Stanford University" }
+      { "@type": "CollegeOrUniversity", "name": "Kean University" }
     ],
     "knowsAbout": [
-      "Robotic Learning",
-      "Multimodal Retrieval",
-      "Efficient Deep Learning",
-      "Agentic Workflows",
-      "Natural Language Processing"
+      "Reliable and adaptive agents",
+      "Multimodal retrieval",
+      "Interactive learning",
+      "Agentic decision-making"
     ],
-    "sameAs": [
-      "https://github.com/yanlining1234741"
-    ]
+    "sameAs": ["https://github.com/yanlining1234741"]
   }
   </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,600;1,9..144,460&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <nav class="nav-left" aria-label="Primary left">
-        <a href="index.html" class="is-active">About</a>
-        <a href="background.html">Background</a>
-      </nav>
       <a class="site-title" href="index.html">Lining Yan</a>
-      <nav class="nav-right" aria-label="Primary right">
-        <a href="research.html">Research</a>
-        <a href="personal.html">Personal</a>
-        <a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a>
-      </nav>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="is-active">About</a>
+        <a href="research.html">Research</a>
+        <a href="background.html">Background</a>
+        <a href="personal.html">Personal</a>
+        <a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
     </div>
   </header>
 
-  <main class="page">
-    <div class="page-panel">
-      <section class="intro">
-        <figure class="intro-photo">
-          <div class="photo-frame">
-            <img src="assets/portrait.jpg" alt="Portrait of Lining Yan" width="400" height="400" />
-          </div>
-        </figure>
+  <section class="opening">
+    <p class="kicker">M.S. Computer Science · Yale University</p>
+    <h1>When the evidence is incomplete, what should the agent do?</h1>
+    <p class="lede">
+      I study reliable and adaptive agents. The system has to decide whether to look again,
+      what to carry to the next step, and when a person should answer.
+    </p>
+    <ol class="questions">
+      <li>
+        <span>01 · Look</span>
+        <strong>Uncertainty</strong>
+        <em>Retrieve again, open another modality, or stop?</em>
+      </li>
+      <li>
+        <span>02 · Carry</span>
+        <strong>State</strong>
+        <em>What should cross a reasoning edge, so an early error does not become the next context?</em>
+      </li>
+      <li>
+        <span>03 · Ask</span>
+        <strong>Help</strong>
+        <em>When should the agent ask, what should the question name, and how should the answer change the next task?</em>
+      </li>
+    </ol>
+  </section>
 
-        <div class="intro-copy">
-          <h1>Lining Yan</h1>
-          <p>
-            I am an M.S. student in Computer Science at
-            <strong>Yale University</strong>.
-          </p>
-          <p>
-            My research interests center on
-            <em>robotic learning</em>, <em>multimodal retrieval</em>,
-            <em>efficient deep learning</em>, <em>agentic workflows</em>, and
-            <em>NLP</em>. I am interested in how intelligent systems can learn
-            from limited supervision, retrieve across modalities, and act
-            reliably in interactive settings.
-          </p>
-          <p>
-            Before Yale, I completed my B.S. in Computer Science with a minor in
-            Applied Mathematics at Kean University (GPA 3.92, Summa Cum Laude),
-            and spent a summer at Stanford studying high-performance computing
-            and data analysis. I have conducted research at Wenzhou-Kean
-            University, the National Research Institute in Beijing, and the
-            University of Notre Dame.
-          </p>
-          <ul class="social">
-            <li><a href="mailto:1234741@wku.edu.cn">Email</a></li>
-            <li><a href="background.html">Background</a></li>
-            <li><a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
-          </ul>
-        </div>
-      </section>
+  <section class="who">
+    <img src="assets/portrait.jpg" alt="Portrait of Lining Yan" width="280" height="350" />
+    <div>
+      <p>
+        I am an M.S. student in Computer Science at Yale. Before that I finished a B.S. in
+        Computer Science and a minor in Applied Mathematics at Kean (GPA 3.92, Summa Cum Laude),
+        with a summer at Stanford.
+      </p>
+      <p>
+        The projects below are one line of work. Detection taught me that a score on a finished
+        string does not choose the next action. Retrieval made the choice of where to look explicit.
+        A document agent and a manuscript in preparation ask which part of a derivation the next
+        step is allowed to see. Since September 2026 I have been in
+        Professor Tesca Fitzgerald’s lab, on when a model should ask for help. That project is early.
+        I am not reporting a result from it.
+      </p>
+      <ul class="links">
+        <li><a href="mailto:lining.yan@yale.edu">lining.yan@yale.edu</a></li>
+        <li><a href="https://github.com/yanlining1234741" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
     </div>
-  </main>
+  </section>
+
+  <section class="trace">
+    <p class="section-label">A short trace</p>
+    <ol class="trace-list">
+      <li>
+        <span class="meta">01 · Under review · VLDB 2026</span>
+        <h2>Where to look</h2>
+        <p>
+          First-author manuscript on cross-modal retrieval. Sinkhorn-balanced routing,
+          R@1 53.6% on MS-COCO and R@5 46.7% on Visual News, while touching about 1.4% of the corpus
+          and running about 13× faster end to end than GENIUS on Visual News.
+        </p>
+      </li>
+      <li>
+        <span class="meta">02 · In preparation</span>
+        <h2>What the next step may see</h2>
+        <p>
+          GARDS-RAG keeps the original question as a global anchor and passes only the predecessor’s
+          subquestion, answer, and rationale along each edge. Preliminary results on MuSiQue,
+          2WikiMultiHopQA, and HotpotQA are ahead of iterative and graph baselines. The manuscript is in preparation.
+        </p>
+      </li>
+      <li>
+        <span class="meta">03 · Yale · since September 2026</span>
+        <h2>When to ask</h2>
+        <p>
+          With Professor Tesca Fitzgerald, I am exploring when a vision-language-action model should
+          ask for help after a failure, and how a correction should change the next attempt.
+        </p>
+      </li>
+      <li>
+        <span class="meta">Published · CSCI 2025</span>
+        <h2>A score is not a next action</h2>
+        <p>
+          First author. A BERT model and a random forest reached 99.9% F1 on abstracts and 93.5% F1
+          on sentences. Attributions concentrated on perplexity and log-probability. The detector
+          scores a finished string.
+        </p>
+      </li>
+    </ol>
+  </section>
 
   <footer class="site-footer">
-    <p>© <span data-year></span> Lining Yan · <a href="sitemap.xml">Sitemap</a></p>
+    <p>© <span data-year></span> Lining Yan · New Haven · <a href="sitemap.xml">Sitemap</a></p>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

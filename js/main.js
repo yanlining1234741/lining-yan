@@ -3,14 +3,6 @@
     el.textContent = String(new Date().getFullYear());
   });
 
-  const header = document.querySelector(".site-header");
-  const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle("is-scrolled", window.scrollY > 8);
-  };
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
-
   const inner = document.querySelector(".header-inner");
   const toggle = document.querySelector(".nav-toggle");
   if (toggle && inner) {
@@ -21,7 +13,6 @@
     });
   }
 
-  // Photo album lightbox
   const items = [...document.querySelectorAll(".gallery-item")];
   const lightbox = document.getElementById("lightbox");
   if (!items.length || !lightbox) return;

@@ -3,93 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research — Lining Yan | Publications</title>
-  <meta name="description" content="Publications and manuscripts by Lining Yan on AI-generated text detection, multimodal retrieval, and efficient deep learning." />
+  <title>Research — Lining Yan</title>
+  <meta name="description" content="Research by Lining Yan on reliable and adaptive agents: multimodal retrieval, dependency-local state, and help-seeking." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://yanlining1234741.github.io/lining-yan/research.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,600;1,9..144,460&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <nav class="nav-left" aria-label="Primary left">
-        <a href="index.html">About</a>
-        <a href="background.html">Background</a>
-      </nav>
       <a class="site-title" href="index.html">Lining Yan</a>
-      <nav class="nav-right" aria-label="Primary right">
-        <a href="research.html" class="is-active">Research</a>
-        <a href="personal.html">Personal</a>
-        <a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a>
-      </nav>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">About</a>
+        <a href="research.html" class="is-active">Research</a>
+        <a href="background.html">Background</a>
+        <a href="personal.html">Personal</a>
+        <a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
     </div>
   </header>
 
-  <main class="page">
-    <div class="page-panel">
-      <h1 class="page-title">Research &amp; Publications</h1>
-      <ul class="news-list">
-        <li>
-          <span class="news-date">In prep.</span>
-          <div>
-            <strong>Pattern-Centric Detection of AI-Generated Text: An Interpretable and Data-Efficient Expert System</strong>
-            — Author (Senior Capstone). Pattern library + Explainable Boosting
-            Machine; AUROC &gt; 0.99 with 44–50 labels across five benchmarks.
-          </div>
-        </li>
-        <li>
-          <span class="news-date">2026</span>
-          <div>
-            <strong>Bridging the Modality Gap that Hurts Cross-Modal Retrieval</strong>
-            — Co-First Author. Submitted to VLDB 2026. Non-autoregressive
-            multimodal retrieval with Sinkhorn-balanced routing;
-            R@1 = 53.6% (MS-COCO), ~13× faster than GENIUS on Visual News.
-          </div>
-        </li>
-        <li>
-          <span class="news-date">2025</span>
-          <div>
-            <strong>Multi-Level Text Feature Analysis for Detecting AI-Generated Content</strong>
-            — First Author. CSCI 2025. BERT + Random Forest ensemble;
-            99.9% / 93.5% F1 at abstract / sentence level.
-          </div>
-        </li>
-        <li>
-          <span class="news-date">2025</span>
-          <div>
-            <strong>MCP-X: An Ultra-Compact CNN for Rice Disease Classification</strong>
-            — Second Author. <em>AgriEngineering</em> 2025, 7(11), 359.
-            0.21M-parameter CNN; 98.93% accuracy on PlantVillage.
-          </div>
-        </li>
-        <li>
-          <span class="news-date">In prep.</span>
-          <div>
-            <strong>Semi-Supervised Artificial Intelligence Text Detection with RoBERTa</strong>
-            — Lead Researcher. Up to 97.79% F1 on HC3 with 1% labeled data.
-          </div>
-        </li>
-        <li>
-          <span class="news-date">In prep.</span>
-          <div>
-            <strong>AI-Enhanced Echocardiography: Comparative Analysis of Image Quality Using ESRGAN</strong>
-            — Lead Researcher. ESRGAN-Denoise achieved Dice 0.9670, IoU 0.9362.
-          </div>
-        </li>
-      </ul>
-    </div>
+  <main class="page page-wide">
+    <h1 class="page-title">Research</h1>
+    <p class="page-lead">
+      The same three questions run through the work. Each piece is marked published,
+      under review, in preparation, or early.
+    </p>
+
+    <p class="section-label">The line I want to continue</p>
+    <ul class="work-list">
+      <li>
+        <span class="meta"><span class="tag">01 Look</span> Under review · VLDB 2026 · First author</span>
+        <h2>Bridging the Modality Gap that Hurts Cross-Modal Retrieval</h2>
+        <p>
+          With Dr. Guoxin Kang. Semantic bucket assignment as entropy-regularized optimal transport,
+          Sinkhorn-balanced routing, bucket-local filtering, and exact cosine reranking.
+          R@1 of 53.6% on MS-COCO and R@5 of 46.7% on Visual News, exploring about 1.4% of the corpus,
+          with about a 13-fold end-to-end speedup over GENIUS on Visual News.
+        </p>
+      </li>
+      <li>
+        <span class="meta"><span class="tag">02 Carry</span> In preparation</span>
+        <h2>GARDS-RAG</h2>
+        <p>
+          The original question stays a global anchor. Each edge of a DAG passes only the predecessor’s
+          subquestion, answer, and rationale. Preliminary results on MuSiQue, 2WikiMultiHopQA, and HotpotQA
+          outperform iterative and graph-structured baselines. This is a manuscript in preparation, not an accepted paper.
+        </p>
+      </li>
+      <li>
+        <span class="meta"><span class="tag">03 Ask</span> Yale · September 2026 – present</span>
+        <h2>Help-seeking in Professor Tesca Fitzgerald’s lab</h2>
+        <p>
+          Exploring when a vision-language-action model should ask for help after a failure, and how a
+          correction should change the next attempt. Early. No result to report.
+        </p>
+      </li>
+      <li>
+        <span class="meta"><span class="tag">03 Ask</span> Notre Dame · Summer 2026</span>
+        <h2>Document agent for scientific evidence</h2>
+        <p>
+          With Dr. Samuel Rund. An extractor for study design, sample size, population, intervention, and
+          outcome from prose, tables, and figures. The checks bind a metric to the experiment, test
+          completeness, separate Methods from Results, and repair a false “Not stated.”
+        </p>
+      </li>
+    </ul>
+
+    <p class="section-label">Earlier work</p>
+    <ul class="work-list">
+      <li>
+        <span class="meta">Published · CSCI 2025 · First author</span>
+        <h2>Multi-Level Text Feature Analysis for Detecting AI-Generated Content</h2>
+        <p>
+          With Professor Baha Ihnaini. A fine-tuned BERT model and a random forest, using global and local
+          features, reached 99.9% F1 on abstracts and 93.5% F1 on sentences. Attributions concentrated on
+          perplexity and log-probability.
+        </p>
+      </li>
+      <li>
+        <span class="meta">Published · AgriEngineering 2025 · Second author</span>
+        <h2>MCP-X: An Ultra-Compact CNN for Rice Disease Classification</h2>
+        <p>
+          Xiang Zhang, Lining Yan, Belal Abuhaija, and Baha Ihnaini.
+          <em>AgriEngineering</em> 7(11), 359.
+          <a href="https://doi.org/10.3390/agriengineering7110359">doi:10.3390/agriengineering7110359</a>.
+          My contribution is writing—review and editing, and visualization.
+        </p>
+      </li>
+      <li>
+        <span class="meta">In preparation</span>
+        <h2>Semi-supervised detection with RoBERTa</h2>
+        <p>Up to 97.79% F1 on HC3 with 1% labeled data. Limited-label detection, before the agent questions.</p>
+      </li>
+      <li>
+        <span class="meta">In preparation · Senior capstone</span>
+        <h2>Pattern-centric detection with an explainable boosting machine</h2>
+        <p>A pattern library plus an Explainable Boosting Machine. AUROC above 0.99 with 44–50 labels across five benchmarks.</p>
+      </li>
+      <li>
+        <span class="meta">In preparation</span>
+        <h2>AI-enhanced echocardiography with ESRGAN</h2>
+        <p>Comparative image-quality analysis. ESRGAN-Denoise reached Dice 0.9670 and IoU 0.9362.</p>
+      </li>
+    </ul>
   </main>
 
   <footer class="site-footer">
     <p>© <span data-year></span> Lining Yan · <a href="sitemap.xml">Sitemap</a></p>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
