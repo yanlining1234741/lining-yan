@@ -133,7 +133,7 @@ img {
   display: grid;
   grid-template-columns: 9.2rem 1fr;
   gap: 1.15rem 1.35rem;
-  align-items: start;
+  align-items: stretch;
   padding: 0.9rem;
   border: 1px solid #d9d9d6;
   background: #fff;
@@ -141,9 +141,9 @@ img {
 
 .intro-card img {
   width: 100%;
-  height: 12.2rem;
+  height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 18%;
 }
 
 .intro-card h1 {
