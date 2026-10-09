@@ -131,8 +131,8 @@ img {
 
 .intro-card {
   display: grid;
-  grid-template-columns: 15.5rem 1fr;
-  gap: 0.85rem 1.2rem;
+  grid-template-columns: 16.5rem 1fr;
+  gap: 0 1.35rem;
   align-items: center;
   padding: 0.85rem;
   border: 1px solid #d9d9d6;
@@ -140,20 +140,10 @@ img {
 }
 
 .intro-card img {
-  grid-column: 1;
-  grid-row: 1;
   display: block;
   width: 100%;
   height: auto;
-}
-
-.intro-id {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.intro-bio {
-  grid-column: 1 / -1;
+  align-self: center;
 }
 
 .intro-card h1 {
@@ -174,15 +164,15 @@ img {
 }
 
 .intro-card .links {
-  margin: 0.7rem 0 0;
+  margin: 0.65rem 0 0.85rem;
 }
 
-.intro-bio p {
+.intro-copy p:not(.role) {
   margin: 0 0 0.65rem;
   font-size: 1rem;
 }
 
-.intro-bio p:last-child {
+.intro-copy p:last-child {
   margin-bottom: 0;
 }
 
@@ -856,13 +846,7 @@ body.lightbox-open {
 
   .intro-card {
     grid-template-columns: 1fr;
-  }
-
-  .intro-card img,
-  .intro-id,
-  .intro-bio {
-    grid-column: 1;
-    grid-row: auto;
+    gap: 0.85rem;
   }
 
   .intro-card img {
