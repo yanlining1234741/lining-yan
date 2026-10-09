@@ -1,12 +1,12 @@
 :root {
-  --paper: #f4efe6;
-  --ink: #1c1712;
-  --muted: #6a5e52;
-  --line: #ddd2c2;
-  --mark: #9c3412;
-  --mark-soft: rgba(156, 52, 18, 0.12);
-  --serif: "Fraunces", "Iowan Old Style", Palatino, serif;
-  --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  --paper: #f5f6f8;
+  --ink: #1a1d23;
+  --muted: #5c6570;
+  --line: #d8dee6;
+  --mark: #1e3a5f;
+  --mark-soft: rgba(30, 58, 95, 0.08);
+  --serif: "Newsreader", "Iowan Old Style", Palatino, serif;
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   --max: 46rem;
   --wide: 68rem;
 }
@@ -28,8 +28,8 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: var(--serif);
-  font-size: 1.08rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.65;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
 }
@@ -41,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: #7c2a0e;
+  color: #14283f;
 }
 
 img {
@@ -52,7 +52,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(244, 239, 230, 0.92);
+  background: rgba(245, 246, 248, 0.94);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -149,19 +149,27 @@ img {
 }
 
 .opening h1 {
-  max-width: 16ch;
-  margin: 0;
+  max-width: 22ch;
+  margin: 0.35rem 0 0;
   font-weight: 560;
-  font-size: clamp(2.4rem, 6vw, 4.3rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.85rem, 3.4vw, 2.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.name-line {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .lede {
-  max-width: 38rem;
-  margin: 1.4rem 0 0;
-  font-size: 1.2rem;
-  color: #3a3128;
+  max-width: 40rem;
+  margin: 1rem 0 0;
+  font-size: 1.08rem;
+  color: #2c3340;
 }
 
 .questions {
@@ -177,7 +185,7 @@ img {
 .questions li {
   margin: 0;
   padding: 1.1rem 1rem 1.15rem;
-  background: rgba(255, 252, 247, 0.7);
+  background: #ffffff;
   border-top: 2px solid var(--mark);
 }
 
@@ -222,7 +230,7 @@ img {
   height: 10.6rem;
   object-fit: cover;
   object-position: center 15%;
-  filter: saturate(0.85);
+  border: 1px solid var(--line);
 }
 
 .who p {
@@ -321,7 +329,7 @@ img {
 .trace-list p,
 .work-list p {
   margin: 0;
-  color: #3a3128;
+  color: #2c3340;
 }
 
 .page-title {
@@ -332,7 +340,7 @@ img {
 .page-lead {
   margin: 0 0 2rem;
   max-width: 38rem;
-  color: #3a3128;
+  color: #2c3340;
 }
 
 .work-list > li {
@@ -342,6 +350,42 @@ img {
 
 .work-list > li:last-child {
   border-bottom: 1px solid var(--line);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 0;
+  list-style: none;
+}
+
+.facts li {
+  margin: 0;
+  padding: 0.8rem 0.85rem 0.9rem;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.facts span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.facts strong {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .tag {
@@ -647,7 +691,8 @@ body.lightbox-open {
   }
 
   .who,
-  .plain-list > li {
+  .plain-list > li,
+  .facts {
     grid-template-columns: 1fr;
     gap: 0.45rem;
   }
@@ -678,7 +723,69 @@ body.lightbox-open {
   }
 }
 
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.opening h1,
+.lede,
+.facts li,
+.questions li,
+.trace-list > li,
+.who {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.questions li:nth-child(2),
+.facts li:nth-child(2),
+.trace-list > li:nth-child(2) { animation-delay: 0.08s; }
+.questions li:nth-child(3),
+.facts li:nth-child(3),
+.trace-list > li:nth-child(3) { animation-delay: 0.16s; }
+.facts li:nth-child(4),
+.trace-list > li:nth-child(4) { animation-delay: 0.24s; }
+
+.site-header {
+  animation: rise 0.45s ease both;
+}
+
+.questions li,
+.facts li,
+.work-list > li {
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.questions li:hover,
+.facts li:hover {
+  transform: translateY(-2px);
+}
+
+.trace-list {
+  transform-origin: top center;
+  animation: rise 0.8s ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .gallery-item img { transition: none; }
+  .opening h1,
+  .lede,
+  .facts li,
+  .questions li,
+  .trace-list,
+  .trace-list > li,
+  .who,
+  .site-header {
+    animation: none;
+  }
+  .questions li:hover,
+  .facts li:hover {
+    transform: none;
+  }
 }
