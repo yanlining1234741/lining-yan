@@ -130,32 +130,23 @@ img {
 }
 
 .intro-card {
-  display: grid;
-  grid-template-columns: 16.5rem 1fr;
-  column-gap: 1.35rem;
-  row-gap: 0.9rem;
-  align-items: start;
+  display: flow-root;
   padding: 0.85rem;
   border: 1px solid #d9d9d6;
   background: #fff;
 }
 
 .intro-card img {
-  grid-column: 1;
-  grid-row: 1;
-  display: block;
-  width: 100%;
+  float: left;
+  width: 11.6rem;
   height: auto;
-  align-self: start;
-}
-
-.intro-id {
-  grid-column: 2;
-  grid-row: 1;
+  margin: 0 1.35rem 0 0;
 }
 
 .intro-bio {
-  grid-column: 1 / -1;
+  clear: both;
+  width: 100%;
+  margin-top: 0.9rem;
 }
 
 .intro-card h1 {
@@ -850,28 +841,16 @@ body.lightbox-open {
   .who,
   .plain-list > li,
   .facts,
-  .intro-card,
   .news li {
     grid-template-columns: 1fr;
     gap: 0.45rem;
   }
 
-  .intro-card {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-  }
-
-  .intro-card img,
-  .intro-id,
-  .intro-bio {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
   .intro-card img {
+    float: none;
     width: 100%;
     height: auto;
-    margin: 0;
+    margin: 0 0 0.85rem;
   }
 
   .who img {
