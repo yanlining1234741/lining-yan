@@ -60,117 +60,90 @@
     </div>
   </header>
 
-  <section class="opening">
-    <p class="kicker">M.S. Computer Science · Yale University · New Haven</p>
-    <p class="name-line">Lining Yan</p>
-    <h1>When the evidence is incomplete, what should the agent do?</h1>
-    <p class="lede">
-      I study reliable and adaptive agents. At each step the system has to decide whether to retrieve again,
-      which state may cross to the next step, and when a person should be asked.
-    </p>
-    <ol class="questions">
-      <li>
-        <span>01</span>
-        <strong>Uncertainty-aware retrieval</strong>
-        <em>Retrieve again, open another modality, or stop?</em>
-      </li>
-      <li>
-        <span>02</span>
-        <strong>Dependency-local state</strong>
-        <em>What should cross a reasoning edge, so an early error does not become the next context?</em>
-      </li>
-      <li>
-        <span>03</span>
-        <strong>Help-seeking</strong>
-        <em>When should the agent ask, what should the question name, and how should the answer change the next task?</em>
-      </li>
-    </ol>
-  </section>
+  <main class="home">
+    <section class="intro-card">
+      <img src="assets/portrait.jpg" alt="Portrait of Lining Yan" width="280" height="350" />
+      <div>
+        <h1>Lining Yan</h1>
+        <p class="role">M.S. Student<br />Computer Science, Yale University</p>
+        <ul class="links">
+          <li><a href="mailto:lining.yan@yale.edu">Email</a></li>
+          <li><a href="https://github.com/yanlining1234741" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        </ul>
+        <p>
+          I am an M.S. student in Computer Science at Yale, in the
+          <a href="https://iqr.cs.yale.edu/" target="_blank" rel="noopener">Inquisitive Robotics Lab</a>
+          with <a href="https://www.tescafitzgerald.com/" target="_blank" rel="noopener">Professor Tesca Fitzgerald</a>. I work on reliable and adaptive agents:
+          systems that have to notice when the evidence for a step is missing.
+        </p>
+        <p>
+          Before Yale I worked on detection, on multimodal retrieval, and on an agent that reads
+          scientific papers. A model can score a finished string, retrieve a region, or extract a field,
+          and still not know what to do when that step is not enough. That decision is the research.
+        </p>
+      </div>
+    </section>
 
-  <ul class="facts">
-    <li>
-      <span>Now</span>
-      <strong>Yale CS, expected 2027. Inquisitive Robotics Lab, since September 2026. Early; no result yet.</strong>
-    </li>
-    <li>
-      <span>Before Yale</span>
-      <strong>Kean B.S., CS and Applied Mathematics, GPA 3.92, Summa Cum Laude. Stanford summer, GPA 4.12/4.3.</strong>
-    </li>
-    <li>
-      <span>Under review</span>
-      <strong>VLDB 2026, first author. R@1 53.6% MS-COCO, about 13× faster than GENIUS on Visual News.</strong>
-    </li>
-    <li>
-      <span>Published</span>
-      <strong>CSCI 2025, first author, 99.9% / 93.5% F1. AgriEngineering 2025, second author.</strong>
-    </li>
-  </ul>
+    <section class="prose-block">
+      <h2>About</h2>
+      <p>I am interested in agents that stay reliable when a step is underdetermined. In particular:</p>
+      <ol class="interest-list">
+        <li>
+          <strong>When to look again.</strong>
+          An agent should retrieve again, open another modality, or stop, instead of continuing on a thin match.
+          (<a href="research.html">VLDB 2026, under review</a>: the manuscript studies that choice as routing, not as another full scan of the corpus.)
+        </li>
+        <li>
+          <strong>What a later step is allowed to see.</strong>
+          The original question has to stay in force, and an early error should not become the next context.
+          (<a href="research.html">GARDS-RAG, in preparation</a>; a document agent built with Samuel Rund at Notre Dame in summer 2026.)
+        </li>
+        <li>
+          <strong>When to ask a person.</strong>
+          The question should name the missing piece, and the answer should change the next attempt, not only the current field.
+          (Yale, since September 2026. This project is early. I am not reporting a result.)
+        </li>
+      </ol>
+    </section>
 
-  <section class="who">
-    <img src="assets/portrait.jpg" alt="Portrait of Lining Yan" width="280" height="350" />
-    <div>
-      <p>
-        I am an M.S. student in Computer Science at Yale. Before that I finished a B.S. in
-        Computer Science and a minor in Applied Mathematics at Kean (GPA 3.92, Summa Cum Laude),
-        with a summer at Stanford.
-      </p>
-      <p>
-        The projects below are one line of work. Detection taught me that a score on a finished
-        string does not choose the next action. Retrieval made the choice of where to look explicit.
-        A document agent and a manuscript in preparation ask which part of a derivation the next
-        step is allowed to see. Since September 2026 I have been in
-        Professor Tesca Fitzgerald’s lab, on when a model should ask for help. That project is early.
-        I am not reporting a result from it.
-      </p>
-      <ul class="links">
-        <li><a href="mailto:lining.yan@yale.edu">lining.yan@yale.edu</a></li>
-        <li><a href="https://github.com/yanlining1234741" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="assets/Lining_Yan-CV.pdf" target="_blank" rel="noopener">CV</a></li>
+    <section class="prose-block">
+      <h2>Experience</h2>
+      <h3 class="exp-label">Current</h3>
+      <article class="exp">
+        <h3>Yale University</h3>
+        <p class="exp-meta">M.S. student, Computer Science (2026–present)</p>
+        <p class="exp-note">Inquisitive Robotics Lab, with Tesca Fitzgerald. When a model should ask for help after a failure, and how a correction should change the next attempt.</p>
+      </article>
+
+      <h3 class="exp-label">Previous</h3>
+      <article class="exp">
+        <h3>University of Notre Dame</h3>
+        <p class="exp-meta">Research intern (Summer 2026)</p>
+        <p class="exp-note">With Samuel Rund. An agent that reads study design, sample, intervention, and outcome from papers, and is checked when it would rather say “Not stated.”</p>
+      </article>
+      <article class="exp">
+        <h3>National Research Institute, Beijing</h3>
+        <p class="exp-meta">Research intern (2026)</p>
+        <p class="exp-note">With Guoxin Kang. Cross-modal retrieval. The question I kept from that project is where the system should look. The manuscript is under review at VLDB.</p>
+      </article>
+      <article class="exp">
+        <h3>Wenzhou-Kean University</h3>
+        <p class="exp-meta">Undergraduate researcher (2023–2025)</p>
+        <p class="exp-note">With Baha Ihnaini. Detection and interpretability of generated text. First-author paper at CSCI 2025. A detector can score a string and still not choose a next action.</p>
+      </article>
+    </section>
+
+    <section class="prose-block">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span>Sep 2026</span> Started the M.S. in Computer Science at Yale and joined the Inquisitive Robotics Lab.</li>
+        <li><span>Summer 2026</span> Research internship at Notre Dame with Samuel Rund, on agents that read scientific papers.</li>
+        <li><span>2025</span> First-author paper at CSCI on detecting AI-generated text.</li>
       </ul>
-    </div>
-  </section>
-
-  <section class="trace">
-    <p class="section-label">A short trace</p>
-    <ol class="trace-list">
-      <li>
-        <span class="meta">01 · Under review · VLDB 2026</span>
-        <h2>Where to look</h2>
-        <p>
-          First-author manuscript on cross-modal retrieval. Sinkhorn-balanced routing,
-          R@1 53.6% on MS-COCO and R@5 46.7% on Visual News, while touching about 1.4% of the corpus
-          and running about 13× faster end to end than GENIUS on Visual News.
-        </p>
-      </li>
-      <li>
-        <span class="meta">02 · In preparation</span>
-        <h2>What the next step may see</h2>
-        <p>
-          GARDS-RAG keeps the original question as a global anchor and passes only the predecessor’s
-          subquestion, answer, and rationale along each edge. Preliminary results on MuSiQue,
-          2WikiMultiHopQA, and HotpotQA are ahead of iterative and graph baselines. The manuscript is in preparation.
-        </p>
-      </li>
-      <li>
-        <span class="meta">03 · Yale · since September 2026</span>
-        <h2>When to ask</h2>
-        <p>
-          With Professor Tesca Fitzgerald, I am exploring when a vision-language-action model should
-          ask for help after a failure, and how a correction should change the next attempt.
-        </p>
-      </li>
-      <li>
-        <span class="meta">Published · CSCI 2025</span>
-        <h2>A score is not a next action</h2>
-        <p>
-          First author. A BERT model and a random forest reached 99.9% F1 on abstracts and 93.5% F1
-          on sentences. Attributions concentrated on perplexity and log-probability. The detector
-          scores a finished string.
-        </p>
-      </li>
-    </ol>
-  </section>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <p>© <span data-year></span> Lining Yan · New Haven · <a href="sitemap.xml">Sitemap</a></p>

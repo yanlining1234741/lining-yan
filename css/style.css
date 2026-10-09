@@ -1,9 +1,9 @@
 :root {
-  --paper: #f5f6f8;
-  --ink: #1a1d23;
-  --muted: #5c6570;
-  --line: #d8dee6;
-  --mark: #1e3a5f;
+  --paper: #fcfcfb;
+  --ink: #1c1c1c;
+  --muted: #5e5e5e;
+  --line: #e6e6e4;
+  --mark: #1a4f8b;
   --mark-soft: rgba(30, 58, 95, 0.08);
   --serif: "Newsreader", "Iowan Old Style", Palatino, serif;
   --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
@@ -52,7 +52,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(245, 246, 248, 0.94);
+  background: rgba(252, 252, 251, 0.96);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -68,11 +68,12 @@ img {
 }
 
 .site-title {
-  font-family: var(--sans);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 560;
+  font-size: 1.35rem;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--ink);
   text-decoration: none;
 }
@@ -120,6 +121,131 @@ img {
   height: 1.5px;
   margin: 0.28rem auto;
   background: var(--ink);
+}
+
+.home {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.6rem 1.25rem 3.5rem;
+}
+
+.intro-card {
+  display: grid;
+  grid-template-columns: 9.2rem 1fr;
+  gap: 1.15rem 1.35rem;
+  align-items: start;
+  padding: 0.9rem;
+  border: 1px solid #d9d9d6;
+  background: #fff;
+}
+
+.intro-card img {
+  width: 100%;
+  height: 12.2rem;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+.intro-card h1 {
+  margin: 0;
+  font-style: italic;
+  font-weight: 560;
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.role {
+  margin: 0.35rem 0 0.55rem;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.intro-card .links {
+  margin: 0 0 0.85rem;
+}
+
+.intro-card p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.prose-block {
+  margin-top: 2.1rem;
+}
+
+.prose-block h2 {
+  margin: 0 0 0.7rem;
+  font-size: 1.35rem;
+  font-weight: 560;
+}
+
+.interest-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.interest-list li {
+  margin: 0.75rem 0;
+  padding-left: 0.2rem;
+}
+
+.exp-label {
+  margin: 1.1rem 0 0.2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.exp {
+  margin: 0.85rem 0 0;
+  padding-left: 0.7rem;
+  border-left: 2px solid #ececec;
+}
+
+.exp h3 {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.exp-meta {
+  margin: 0.1rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.exp-note {
+  margin: 0.15rem 0 0;
+  font-size: 0.98rem;
+}
+
+.news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news li {
+  display: grid;
+  grid-template-columns: 6.2rem 1fr;
+  gap: 0.75rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.news li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.news span {
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  color: var(--muted);
 }
 
 .page {
@@ -692,9 +818,16 @@ body.lightbox-open {
 
   .who,
   .plain-list > li,
-  .facts {
+  .facts,
+  .intro-card,
+  .news li {
     grid-template-columns: 1fr;
     gap: 0.45rem;
+  }
+
+  .intro-card img {
+    width: 8.5rem;
+    height: 10.5rem;
   }
 
   .who img {
