@@ -143,9 +143,6 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 810 / 707;
-  object-fit: cover;
-  object-position: center;
 }
 
 .intro-card h1 {
@@ -844,7 +841,6 @@ body.lightbox-open {
 
   .intro-card img {
     width: 100%;
-    max-width: 18rem;
     height: auto;
   }
 
