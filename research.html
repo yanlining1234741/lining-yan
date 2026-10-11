@@ -36,26 +36,59 @@
     </p>
 
     <p class="section-label">The line I want to continue</p>
-    <ul class="work-list">
-      <li>
-        <span class="meta"><span class="tag">01 Look</span> Under review · VLDB 2026 · First author</span>
-        <h2>Bridging the Modality Gap that Hurts Cross-Modal Retrieval</h2>
-        <p>
-          With Dr. Guoxin Kang. Semantic bucket assignment as entropy-regularized optimal transport,
-          Sinkhorn-balanced routing, bucket-local filtering, and exact cosine reranking.
-          R@1 of 53.6% on MS-COCO and R@5 of 46.7% on Visual News, exploring about 1.4% of the corpus,
-          with about a 13-fold end-to-end speedup over GENIUS on Visual News.
-        </p>
+    <ul class="project-list">
+      <li class="project">
+        <button type="button" class="project-figure" data-full="assets/research/spar-overview.jpg" data-caption="SPAR overview: multi-view bucket assignment, a learned router, context-aware re-ranking, and dynamic maintenance.">
+          <img src="assets/research/spar-overview.jpg" alt="Overview diagram of SPAR: index construction, query processing, and dynamic maintenance" width="1601" height="719" loading="lazy" />
+        </button>
+        <div class="project-body">
+          <span class="meta"><span class="tag">01 Look</span> Under review · PVLDB · Co-first author</span>
+          <h2>Bridging the Modality Gap that Hurts Cross-Modal Retrieval</h2>
+          <p class="authors">Yongxi Yang*, <strong>Lining Yan*</strong>, Wenxin Zhou*, Taotao Zhan, Shaohui Yang, Guoxin Kang · *equal contribution, alphabetical</p>
+          <p>
+            Across modalities, the nearest vector is often not the relevant one. SPAR (Semantic Partitioning with
+            Context-Aware Re-ranking) replaces geometric routing with a learned one: the corpus is split into
+            capacity-balanced semantic buckets, a two-layer MLP router picks the top buckets in one forward pass,
+            and the bounded candidate set makes three re-ranking corrections affordable — hubness correction,
+            α-weighted query expansion, and a residual cross-encoder. New items are assigned to frozen centroids,
+            so insertion needs no router retraining.
+          </p>
+          <ul class="stats">
+            <li><strong>+7.5–42.5 pp</strong><span>routing recall over state-of-the-art baselines</span></li>
+            <li><strong>+0.5–39.6 pp</strong><span>end-to-end recall over baselines</span></li>
+            <li><strong>7 / 7</strong><span>workloads above exhaustive cosine search in Recall@1</span></li>
+          </ul>
+          <p class="project-note">Seven workloads on MS-COCO, VisualNews, NIGHTS, Fashion200K (M-BEIR), and Flickr30K.</p>
+          <ul class="links">
+            <li><a href="https://github.com/snowballOUO/SPAR" target="_blank" rel="noopener">Code</a></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <span class="meta"><span class="tag">02 Carry</span> In preparation</span>
-        <h2>GARDS-RAG</h2>
-        <p>
-          The original question stays a global anchor. Each edge of a DAG passes only the predecessor’s
-          subquestion, answer, and rationale. Preliminary results on MuSiQue, 2WikiMultiHopQA, and HotpotQA
-          outperform iterative and graph-structured baselines. This is a manuscript in preparation, not an accepted paper.
-        </p>
+      <li class="project">
+        <button type="button" class="project-figure" data-full="assets/research/gards-rag-overview.png" data-caption="GARDS-RAG overview: reasoning-graph planning, globally anchored retrieval, and dependency-state-routed execution.">
+          <img src="assets/research/gards-rag-overview.png" alt="Overview diagram of GARDS-RAG answering a multi-hop question through a dependency graph" width="1601" height="904" loading="lazy" />
+        </button>
+        <div class="project-body">
+          <span class="meta"><span class="tag">02 Carry</span> In preparation</span>
+          <h2>GARDS-RAG: Globally Anchored Dependency-State Routing for Multi-Hop QA</h2>
+          <p>
+            Multi-hop RAG fails in two ways: a subquestion loses the constraints of the original question
+            (intent drift), or a step sees intermediate states it does not depend on (state contamination).
+            GARDS-RAG keeps the original question as a global anchor and treats each DAG edge as a channel
+            that passes only the direct predecessor’s subquestion, answer, and rationale into reranking and
+            generation. This is a manuscript in preparation, not an accepted paper.
+          </p>
+          <ul class="stats">
+            <li><strong>40.8 vs 29.6</strong><span>EM on MuSiQue against the best baseline (DeepSeek-V4-Flash)</span></li>
+            <li><strong>67.6 vs 59.4</strong><span>EM on 2WikiMultiHopQA, same setting</span></li>
+            <li><strong>66%</strong><span>of 2-hop accuracy kept at 4 hops, vs 32–44% for baselines</span></li>
+          </ul>
+          <p class="project-note">Same pattern across three LLMs (DeepSeek-V4-Flash, GPT-5.4 mini, Qwen 3.7 Flash) and two retrievers (BM25, Contriever).</p>
+        </div>
       </li>
+    </ul>
+
+    <ul class="work-list work-list-follow">
       <li>
         <span class="meta"><span class="tag">03 Ask</span> Yale · September 2026 – present</span>
         <h2>Help-seeking in Professor Tesca Fitzgerald’s lab</h2>
@@ -76,35 +109,84 @@
     </ul>
 
     <p class="section-label">Earlier work</p>
-    <ul class="work-list">
-      <li>
-        <span class="meta">Published · CSCI 2025 · First author</span>
-        <h2>Multi-Level Text Feature Analysis for Detecting AI-Generated Content</h2>
-        <p>
-          With Professor Baha Ihnaini. A fine-tuned BERT model and a random forest, using global and local
-          features, reached 99.9% F1 on abstracts and 93.5% F1 on sentences. Attributions concentrated on
-          perplexity and log-probability.
-        </p>
+    <ul class="project-list">
+      <li class="project">
+        <button type="button" class="project-figure" data-full="assets/research/multilevel-detection-framework.jpg" data-caption="Multi-level text analysis framework: preprocessing, global and local features, model training, and SHAP.">
+          <img src="assets/research/multilevel-detection-framework.jpg" alt="Flowchart of the multi-level text feature analysis framework" width="828" height="732" loading="lazy" />
+        </button>
+        <div class="project-body">
+          <span class="meta">Published · CSCI 2025 · First author</span>
+          <h2>Multi-Level Text Feature Analysis for Detecting AI-Generated Content</h2>
+          <p class="authors"><strong>Lining Yan</strong>, Haoru Ye, Tailin Pan, Baha Ihnaini · Wenzhou-Kean University</p>
+          <p>
+            Scientific abstracts from the CHEAT dataset, read at two levels: the whole abstract and each sentence.
+            Human abstracts vary more in sentence length (10–50 words) and lexical diversity (TTR 0.5–0.7);
+            AI abstracts are more uniform (15–30 words, TTR around 0.4). A ModernBERT + random forest ensemble
+            uses both levels, and SHAP attributions concentrate on perplexity and token log-probability.
+          </p>
+          <ul class="stats">
+            <li><strong>99.9%</strong><span>F1 on abstracts</span></li>
+            <li><strong>93.5%</strong><span>F1 on sentences</span></li>
+            <li><strong>5</strong><span>models compared: LSTM, RF, BERT, ModernBERT, ensemble</span></li>
+          </ul>
+        </div>
       </li>
-      <li>
-        <span class="meta">Published · AgriEngineering 2025 · Second author</span>
-        <h2>MCP-X: An Ultra-Compact CNN for Rice Disease Classification</h2>
-        <p>
-          Xiang Zhang, Lining Yan, Belal Abuhaija, and Baha Ihnaini.
-          <em>AgriEngineering</em> 7(11), 359.
-          <a href="https://doi.org/10.3390/agriengineering7110359">doi:10.3390/agriengineering7110359</a>.
-          My contribution is writing—review and editing, and visualization.
-        </p>
+      <li class="project">
+        <button type="button" class="project-figure" data-full="assets/research/pattern-detection-architecture.jpg" data-caption="Pattern-centric expert system: data pipeline, feature extraction, generative pattern library, and EBM / XGBoost classifiers.">
+          <img src="assets/research/pattern-detection-architecture.jpg" alt="Architecture of the pattern-centric AI-generated text detection system" width="1552" height="848" loading="lazy" />
+        </button>
+        <div class="project-body">
+          <span class="meta">In preparation · Senior capstone</span>
+          <h2>Pattern-Centric Detection of AI-Generated Text: An Interpretable and Data-Efficient Expert System</h2>
+          <p>
+            Detectors usually need thousands of labels and explain nothing. Here, KMeans over statistical,
+            syntactic, and semantic features builds a small Generative Pattern Library; an Explainable Boosting
+            Machine is trained only on the 44–50 cluster representatives, and every prediction comes with a SHAP
+            attribution. No white-box access to the generating model is needed.
+          </p>
+          <ul class="stats">
+            <li><strong>0.9945</strong><span>AUROC on HC3 with 44–50 labeled samples</span></li>
+            <li><strong>&gt;95%</strong><span>of full-model performance at ~1/100 of the labels</span></li>
+            <li><strong>5 / 5</strong><span>benchmarks above zero-shot DetectGPT</span></li>
+          </ul>
+          <p class="project-note">Benchmarks: DAIGT, HC3, LLMDetect, MAGE, MultiModel. Top signals: inter-sentence coherence, type-token ratio, pronoun ratio.</p>
+          <ul class="links">
+            <li><a href="https://github.com/yanlining1234741/AIGT-Pattern-Detection" target="_blank" rel="noopener">Code</a></li>
+          </ul>
+        </div>
       </li>
+      <li class="project">
+        <button type="button" class="project-figure" data-full="assets/research/mcp-x-architecture.jpg" data-caption="MCP-X architecture: shallow encoder, multi-branch attention refinement, BRSE encoder–decoder, and a lightweight classifier.">
+          <img src="assets/research/mcp-x-architecture.jpg" alt="Architecture of the MCP-X convolutional network" width="1601" height="747" loading="lazy" />
+        </button>
+        <div class="project-body">
+          <span class="meta">Published · AgriEngineering 2025 · Second author</span>
+          <h2>MCP-X: An Ultra-Compact CNN for Rice Disease Classification in Resource-Constrained Environments</h2>
+          <p class="authors">Xiang Zhang, <strong>Lining Yan</strong>, Belal Abuhaija, Baha Ihnaini · <em>AgriEngineering</em> 7(11), 359</p>
+          <p>
+            A rice-disease classifier small enough for on-device use, trained from scratch with no pretraining.
+            Expert routing diversifies feature branches, efficient channel attention reweights them, and a bi-level
+            recurrent encoder–decoder captures lesion scale and texture. My contribution is writing—review and
+            editing, and visualization.
+          </p>
+          <ul class="stats">
+            <li><strong>0.21 M</strong><span>parameters, about 1 MB in memory</span></li>
+            <li><strong>98.93%</strong><span>accuracy on PlantVillage; 96.59% on rice field images</span></li>
+            <li><strong>16.7×</strong><span>fewer parameters than MobileNetV2</span></li>
+          </ul>
+          <ul class="links">
+            <li><a href="https://doi.org/10.3390/agriengineering7110359" target="_blank" rel="noopener">Paper (open access)</a></li>
+            <li><a href="https://github.com/yanlining1234741/MCP_X" target="_blank" rel="noopener">Code</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="work-list work-list-follow">
       <li>
         <span class="meta">In preparation</span>
         <h2>Semi-supervised detection with RoBERTa</h2>
         <p>Up to 97.79% F1 on HC3 with 1% labeled data. Limited-label detection, before the agent questions.</p>
-      </li>
-      <li>
-        <span class="meta">In preparation · Senior capstone</span>
-        <h2>Pattern-centric detection with an explainable boosting machine</h2>
-        <p>A pattern library plus an Explainable Boosting Machine. AUROC above 0.99 with 44–50 labels across five benchmarks.</p>
       </li>
       <li>
         <span class="meta">In preparation</span>
@@ -113,6 +195,16 @@
       </li>
     </ul>
   </main>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-prev" aria-label="Previous">‹</button>
+    <figure class="lightbox-figure">
+      <img src="" alt="" />
+      <figcaption></figcaption>
+    </figure>
+    <button type="button" class="lightbox-next" aria-label="Next">›</button>
+  </div>
 
   <footer class="site-footer">
     <p>© <span data-year></span> Lining Yan · <a href="sitemap.xml">Sitemap</a></p>

@@ -13,7 +13,7 @@
     });
   }
 
-  const items = [...document.querySelectorAll(".gallery-item")];
+  const items = [...document.querySelectorAll(".gallery-item, .project-figure")];
   const lightbox = document.getElementById("lightbox");
   if (!items.length || !lightbox) return;
 
