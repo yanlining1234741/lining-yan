@@ -69,7 +69,7 @@
           <img src="assets/research/gards-rag-overview.png" alt="Overview diagram of GARDS-RAG answering a multi-hop question through a dependency graph" width="1601" height="904" loading="lazy" />
         </button>
         <div class="project-body">
-          <span class="meta"><span class="tag">02 Carry</span> In preparation</span>
+          <span class="meta"><span class="tag">02 Carry</span> In preparation · NAACL 2027</span>
           <h2>GARDS-RAG: Globally Anchored Dependency-State Routing for Multi-Hop QA</h2>
           <p>
             Multi-hop RAG fails in two ways: a subquestion loses the constraints of the original question
@@ -86,6 +86,40 @@
           <p class="project-note">Same pattern across three LLMs (DeepSeek-V4-Flash, GPT-5.4 mini, Qwen 3.7 Flash) and two retrievers (BM25, Contriever).</p>
         </div>
       </li>
+      <li class="project">
+        <div class="project-figures">
+          <button type="button" class="project-figure" data-full="assets/research/paper-atomizer-ask.jpg" data-caption="Paper Atomizer: a question answered from the paper, with its source in Methods.">
+            <img src="assets/research/paper-atomizer-ask.jpg" alt="Paper Atomizer viewer with a grounded answer in the Ask panel" width="1600" height="1000" loading="lazy" />
+          </button>
+          <button type="button" class="project-figure" data-full="assets/research/paper-atomizer-layout.jpg" data-caption="Paper Atomizer: figures (green) and tables (blue) boxed by local layout detection.">
+            <img src="assets/research/paper-atomizer-layout.jpg" alt="Paper Atomizer viewer with figure and table boxes on a scanned page" width="1600" height="1000" loading="lazy" />
+          </button>
+        </div>
+        <div class="project-body">
+          <span class="meta"><span class="tag">03 Ask</span> Notre Dame CRC · July–August 2026 · Research intern</span>
+          <h2>Paper Atomizer: An Agentic Workflow for Scientific Evidence</h2>
+          <p class="authors">With Dr. Samuel Rund, Center for Research Computing, University of Notre Dame</p>
+          <p>
+            Paper Atomizer is the CRC’s tool for turning a research PDF into structured data — text, figures,
+            tables, and chart values. My branch adds the agentic layer: a coordinator that turns a researcher’s
+            goal (explore, extract data, figures, traits, or full review) into a processing plan, and an Ask
+            system that answers questions from the paper with the evidence attached.
+          </p>
+          <p>
+            Each answer is drafted, checked, and repaired before it is shown. The checks search Methods, Results,
+            Discussion, and tables again before allowing “Not stated”; bind each number to its metric, life stage,
+            and experiment, so a Figure 4 value cannot answer a question about Figure 3; and require every part of
+            a multi-part question to be covered. I also moved the default OCR from a remote DeepSeek model to a
+            local stack that handles scanned papers: PyMuPDF words, Tesseract, and PP-DocLayout for figure and table boxes.
+          </p>
+          <ul class="stats">
+            <li><strong>8</strong><span>evidence checks before an answer is shown</span></li>
+            <li><strong>5</strong><span>research goals mapped to a processing plan</span></li>
+            <li><strong>19k</strong><span>lines added across 300 files on my branch</span></li>
+          </ul>
+          <p class="project-note">FastAPI, React + TypeScript, PostgreSQL, Gemini, PyMuPDF, Tesseract, PP-DocLayout. Code: <code>crcresearch/paper-atomizer</code>, branch <code>Cris/agentic-workflow</code> (private repository).</p>
+        </div>
+      </li>
     </ul>
 
     <ul class="work-list work-list-follow">
@@ -95,15 +129,6 @@
         <p>
           Exploring when a vision-language-action model should ask for help after a failure, and how a
           correction should change the next attempt. Early. No result to report.
-        </p>
-      </li>
-      <li>
-        <span class="meta"><span class="tag">03 Ask</span> Notre Dame · Summer 2026</span>
-        <h2>Document agent for scientific evidence</h2>
-        <p>
-          With Dr. Samuel Rund. An extractor for study design, sample size, population, intervention, and
-          outcome from prose, tables, and figures. The checks bind a metric to the experiment, test
-          completeness, separate Methods from Results, and repair a false “Not stated.”
         </p>
       </li>
     </ul>
